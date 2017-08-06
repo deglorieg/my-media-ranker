@@ -1,0 +1,36 @@
+{
+    "categories": [
+        {
+            "id": "7", 
+            "name": "SSS"
+        }, 
+        {
+            "id": "6", 
+            "name": "SS"
+        }, 
+        {
+            "id": "5", 
+            "name": "S"
+        }, 
+        {
+            "id": "4", 
+            "name": "A"
+        }, 
+        {
+            "id": "3", 
+            "name": "B"
+        }, 
+        {
+            "id": "2", 
+            "name": "C"
+        }, 
+        {
+            "id": "1", 
+            "name": "D"
+        }, 
+        {
+            "id": "0", 
+            "name": "UNRANKED"
+        }
+    ]
+}

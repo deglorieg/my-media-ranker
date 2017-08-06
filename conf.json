@@ -1,0 +1,10 @@
+{
+    "config": [
+        {
+            "category-file": "defaultCategories.json",
+			"medialist-file": "exampleMediaFile.json",
+			"rankings-file": "exampleRankings.json",
+			"img-path" : "img"
+        }
+	]
+}

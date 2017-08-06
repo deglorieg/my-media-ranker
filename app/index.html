@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="ng-scope" ng-app="ratings">
+<head>
+  <meta charset="UTF-8">
+  <title>My Media Ranker</title>
+  <script src="jquery-1.12.0.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
+  <script src="angular-app.js"></script>
+  <script src="angular-controller.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h1>MMR</h1>
+		<ul>
+			<li><a>Explore</a></li>
+			<li><a>Rank</a></li>
+		</ul>
+	</div>
+	<div id="main" class="ng-scope" ng-controller="rating_controller">
+		<div id="sidebar">
+			<div class="flex-container" ng-repeat="media in mediaList" id='media{{media.id}}' ng-click='selectMedia(media)'>
+				<img src='{{media.img}}'/>{{media.name}}
+			</div>
+		</div>
+		<div id="instance">
+		
+		</div>
+	</div>
+</body>
+</html>
