@@ -64,6 +64,19 @@ controllers.controller('rating_controller', ['$scope', '$http', '$q', function($
 		
 		$scope.mediaList = mediaNgList;
 		
+		var rankNgList = []
+		$.each(catDict, function(key, value) {
+			obj = {};
+			obj['id'] = key;
+			obj['name'] = value;
+			//obj['img'] = mediaImgDict[key];
+			
+			rankNgList.push(obj);
+			console.log(key, value);
+		});
+		
+		$scope.rankList = rankNgList;
+		
 		// Object.keys(mediaDict).forEach(function(currentKey) {
 			// console.log('foo')
 		// });

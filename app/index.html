@@ -7,10 +7,10 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
   <script src="angular-app.js"></script>
   <script src="angular-controller.js"></script>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
 	<div id="header">
-		<h1>MMR</h1>
 		<ul>
 			<li><a>Explore</a></li>
 			<li><a>Rank</a></li>
@@ -19,11 +19,23 @@
 	<div id="main" class="ng-scope" ng-controller="rating_controller">
 		<div id="sidebar">
 			<div class="flex-container" ng-repeat="media in mediaList" id='media{{media.id}}' ng-click='selectMedia(media)'>
-				<img src='{{media.img}}'/>{{media.name}}
+				<img class="preview-img" src='{{media.img}}'/>
+				<div class="preview-text">{{media.name}}</div>
 			</div>
 		</div>
-		<div id="instance">
-		
+		<div id="instance-back">
+			<div id="instance">
+				<h1>Selected Instance Title</h1>
+				<img id="selinst-img" />
+				<ul>
+					<li class="mediarank-btn-container" ng-repeat="rank in rankList">
+						<a>{{rank.name}}</a>
+					</li>
+				</ul>
+				<ul>
+					<li><a>Apply</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </body>
