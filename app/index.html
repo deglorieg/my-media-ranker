@@ -14,6 +14,7 @@
 		<ul>
 			<li><a>Explore</a></li>
 			<li><a>Rank</a></li>
+			<li><a>Apply</a></li>
 		</ul>
 	</div>
 	<div id="main" class="ng-scope" ng-controller="rating_controller">
@@ -23,20 +24,17 @@
 				<div class="preview-text">{{media.name}}</div>
 			</div>
 		</div>
-		<div id="instance-back">
-			<div id="instance">
-				<h1>Selected Instance Title</h1>
-				<img id="selinst-img" />
-				<ul>
-					<li class="mediarank-btn-container" ng-repeat="rank in rankList">
-						<a>{{rank.name}}</a>
-					</li>
-				</ul>
-				<ul>
-					<li><a>Apply</a></li>
-				</ul>
-			</div>
+		<div id="instance">
+			<h1 id="selinst-name">{{selectedMedia.name}}</h1>
+			<img id="selinst-img" src="{{selectedMedia.image}}"/>
+			<ul class="mediarank-btn-container">
+				<li  ng-repeat="rank in rankList">
+					<a href="about.html">{{rank.name}}</a>
+				</li>
+			</ul>
 		</div>
+		<!-- <div id="instance-back"> -->
+		<!-- </div> -->
 	</div>
 </body>
 </html>

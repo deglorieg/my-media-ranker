@@ -27,6 +27,12 @@ controllers.controller('rating_controller', ['$scope', '$http', '$q', function($
 			});	
 	}
 	
+	
+	
+	function selectMedia(mediaIndex) {
+		console.log(mediaIndex);
+	}
+	
 	function parseData(categoriesObj, mediaObj) {
 		var mediaDict = {};
 		var mediaList = mediaObj.media;
@@ -76,6 +82,21 @@ controllers.controller('rating_controller', ['$scope', '$http', '$q', function($
 		});
 		
 		$scope.rankList = rankNgList;
+		
+		
+		$scope.selectedMedia = {
+			image: "../../resources/unassigned.jpg",
+			name: '<Selected Media Title>'
+		};
+		
+		$scope.selectMedia = function(media_entry) {
+			var id = media_entry.id;
+			if(id != -1)
+			{
+				$scope.selectedMedia.image = mediaImgDict[id];
+				$scope.selectedMedia.name = mediaDict[id];
+			}
+		}
 		
 		// Object.keys(mediaDict).forEach(function(currentKey) {
 			// console.log('foo')

@@ -12,6 +12,9 @@
   
   --colour-palette4: #efefef;
   
+  --colour-palette7: #dddddd;
+  --colour-palette8: #bbbbbb;
+  
   --selinst-img-size: 300px;
 }
 
@@ -41,25 +44,33 @@ html,body {
     margin: 0px;
 }
 
+#header li {
+    color: #CDC7A6;
+    background-color: var(--colour-palette0);
+	
+	/* line-height: 1px; */
+	border-left: 1px solid #000; 
+	border-right: 1px solid #000; 
+	/* height: 47px; */
+    text-align: center;
+    display: block;
+    padding: 0px;
+    float: left;
+    width: 220px;
+}
+
 #header li:hover {
     background-color: var(--colour-palette1);
     color: #876F00;
 	
 	cursor: pointer;
 }
+
 #header a {
     text-decoration: none;
+	font: 18px/21px Arial;
     height: 48px;
     line-height: 48px;
-}
-#header li {
-    color: #CDC7A6;
-    background-color: var(--colour-palette0);
-    text-align: center;
-    display: block;
-    padding: 0px;
-    float: left;
-    width: 220px;
 }
 
 /*****************************************/
@@ -68,10 +79,12 @@ html,body {
 
 #sidebar {
 	position: absolute;
+	display: block;
+	
 	top: 48px;
-    min-height: 100%;
+	bottom: 0px;
+	height: auto;
 	width: var(--sidebar-width);
-    /* overflow-x: hidden; */
 	background-color: var(--colour-palette2);
 }
 
@@ -112,31 +125,56 @@ html,body {
 /*****************************************/
 /* 				Main		 			 */
 /*****************************************/
-#instance-back {
-	position: absolute;
-	top: 48px;
-    min-height: 100%;
-	width: 100%;
-	z-index: -1;
-	overflow: hidden;
-    /* overflow-x: hidden; */
-	background-color: var(--colour-palette4);
-}
-
 #instance {
 	position: absolute;
+	margin-top: 48px;
 	left: var(--sidebar-width);
-    min-height: 100%;
-	width: 100%;
+    /* min-height: 100%; */
+	/* width: 100%; */
 	overflow: auto;
     /* overflow-x: hidden; */
+}
+
+#selinst-name {
+	margin-left: 50px;
+	font: bold 25px/30px Arial;
 }
 
 #selinst-img {
 	width: var(--selinst-img-size);
 	height: var(--selinst-img-size);
+	outline: 4px solid black;
+	margin-left: 50px;
+	margin-right: auto;
+	display: block;
+}
+
+
+.mediarank-btn-container li:hover {
+    background-color: var(--colour-palette8);
+    color: #000000; /*#876F00;*/
+	cursor: pointer;
 }
 
 .mediarank-btn-container {
-	
+    width: 500px;
+}
+
+.mediarank-btn-container li {
+	color: #000000; /*#CDC7A6;*/
+    background-color: var(--colour-palette7);
+    text-align: center;
+    display: block;
+    padding: 0px;
+	padding-right: 5px;
+    float: left;
+    width: 100px;
+	font: bold 16px/20px Arial;
+}
+
+.mediarank-btn-container a {
+    text-decoration: none;
+    height: 48px;
+    line-height: 48px;
+	color: #000000;
 }
